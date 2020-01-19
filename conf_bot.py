@@ -1,14 +1,14 @@
 # 826978167:AAFIkxM6InqxRDT5R3GOyEnTAKFA3YzMQTo
 lstr = '''
-Good'''
+Choose your preferences'''
 
 hello = '''
 Hello!
 
-I am NutritionBot®️.
+I am a NutritionBot®️.
 
-You can easily calculate nutrition by sending me a photo of your meal or texting me.
-I also recognize voice messages, so just say what you are eating!☑️
+You can easily calcilate nutrition with me, just send me a photo of your meal or text it to me.
+Also I recognize voice messages, so just tell me what you are eating!☑️
 
 Let's start👇
 '''
@@ -24,32 +24,30 @@ users = []
 
 print('starting...')
 photos = [
+          ['Rice\n","Amount: 100 grams","Calories: 130","Total fat (g): 0.9","Cholesterol (mg): 0","Protein (g): 2.6","Sodium (mg): 5", "Iron (%): 2', 'https://static01.nyt.com/images/2018/02/21/dining/00RICEGUIDE8/00RICEGUIDE8-articleLarge.jpg'],
+          ['Chicken\n","Amount: 100 grams","Calories: 239","Total fat (g): 14","Cholesterol (mg): 88","Protein (g): 27","Sodium (mg): 82", "Iron (%): 7', 'https://s23209.pcdn.co/wp-content/uploads/2019/01/Instant-Pot-Rotisserie-ChickenIMG_8266.jpg'],
+          ['Beef\n","Amount: 100 grams","Calories: 250","Total fat (g): 15","Cholesterol (mg): 90","Protein (g): 26","Sodium (mg): 72", "Iron (%): 14', 'https://www.pressurecookrecipes.com/wp-content/uploads/2019/11/instant-pot-roast-beef.jpg'],
+          ['Pork\n","Amount: 100 grams","Calories: 145","Total fat (g): 14","Cholesterol (mg): 80","Protein (g): 27","Sodium (mg): 62", "Iron (%): 4', 'https://www.bbcgoodfood.com/sites/default/files/recipe-collections/collection-image/2013/05/roast-rack-of-pork-with-wild-garlic-stuffing_1.jpg'],
+          ['Apple\n","Amount: 100 grams","Calories: 52","Total fat (g): 0.2","Cholesterol (mg): 0","Protein (g): 0.3","Sodium (mg): 1", "Iron (%): 0', 'https://i5.walmartimages.ca/images/Large/094/514/6000200094514.jpg'],
+          ['Banana\n","Amount: 100 grams","Calories: 89","Total fat (g): 0.3","Cholesterol (mg): 0","Protein (g): 1.1","Sodium (mg): 1", "Iron (%): 1', 'https://api.time.com/wp-content/uploads/2019/11/gettyimages-459761948.jpg?w=600&quality=85'],
+          ['Orange\n","Amount: 100 grams","Calories: 47","Total fat (g): 0.1","Cholesterol (mg): 0","Protein (g): 0.9","Sodium (mg): 0", "Iron (%): 0', 'https://img.devrant.com/devrant/rant/r_355835_mYbbd.jpg'],
+          ['White Bread\n","Amount: 100 grams","Calories: 265","Total fat (g): 3.2","Cholesterol (mg): 0","Protein (g): 9","Sodium (mg): 491", "Iron (%): 19', 'https://www.saveur.com/sites/saveur.com/files/milk-bread-14_2000x1500.jpg'],
+         ]
 
-["Rice\n","Amount: 100 grams","Calories: 130","Total fat (g): 0.9","Cholesterol (mg): 0","Protein (g): 2.6","Sodium (mg): 5", "Iron (%): 2","https://hips.hearstapps.com/vidthumb/images/delish-u-rice-2-1529079587.jpg"],
-["Chicken\n","Amount: 100 grams","Calories: 239","Total fat (g): 14","Cholesterol (mg): 88","Protein (g): 27","Sodium (mg): 82", "Iron (%): 7","https://www.maangchi.com/wp-content/uploads/2018/02/roasted-chicken-1.jpg"],
-["Beef\n","Amount: 100 grams","Calories: 250","Total fat (g): 15","Cholesterol (mg): 90","Protein (g): 26","Sodium (mg): 72", "Iron (%): 14","https://www.pressurecookrecipes.com/wp-content/uploads/2019/11/instant-pot-roast-beef.jpg"],
-["Pork\n","Amount: 100 grams","Calories: 145","Total fat (g): 14","Cholesterol (mg): 80","Protein (g): 27","Sodium (mg): 62", "Iron (%): 4","https://www.thespruceeats.com/thmb/csX1Y5mVIaiMXV4-uFN976C9Eds=/2048x1152/smart/filters:no_upscale()/garlic-and-herb-crusted-pork-loin-roast-3059504-7_preview-5b2bc4f88023b90037a968fa.jpg"],
-["Apple\n","Amount: 100 grams","Calories: 52","Total fat (g): 0.2","Cholesterol (mg): 0","Protein (g): 0.3","Sodium (mg): 1", "Iron (%): 0","https://www.allfoodsinfo.com/wp-content/uploads/2019/08/apple-benefits-vegetable-1080x540.jpg"],
-["Banana\n","Amount: 100 grams","Calories: 89","Total fat (g): 0.3","Cholesterol (mg): 0","Protein (g): 1.1","Sodium (mg): 1", "Iron (%): 1","https://api.time.com/wp-content/uploads/2019/11/gettyimages-459761948.jpg?w=600&quality=85"],
-["Orange\n","Amount: 100 grams","Calories: 47","Total fat (g): 0.1","Cholesterol (mg): 0","Protein (g): 0.9","Sodium (mg): 0", "Iron (%): 0","https://i5.walmartimages.ca/images/Enlarge/110/004/999999-33383110004.jpg"],
-["Broccoli\n","Amount: 100 grams","Calories: 31","Total fat (g): 0.4","Cholesterol (mg): 0","Protein (g): 2.5","Sodium (mg): 33", "Iron (%): 3","https://az836796.vo.msecnd.net/media/image/product/fr/medium/0000000094060.jpg"],
-["Carrot\n","Amount: 100 grams","Calories: 41","Total fat (g): 0.2","Cholesterol (mg): 0","Protein (g): 0.9","Sodium (mg): 69", "Iron (%): 4","https://www.almanac.com/sites/default/files/image_nodes/carrots-table_popidar-ss.jpg"],
-["White Bread\n","Amount: 100 grams","Calories: 265","Total fat (g): 3.2","Cholesterol (mg): 0","Protein (g): 9","Sodium (mg): 491", "Iron (%): 19","https://images.smuckers.ca/images/recipes/29/Basic-White-Bread_desktop.jpg"],
-
-]
-states = ['Enter your full name👇',
-          'Enter your age👇',
-          'How many calories are you planning on consuming today?👇',
-          'Enter your allergies👇',
-          'Enter your gender👇',
-          'You are already registered👇']
+states = ['Write your full name👇',
+          'Write you age👇',
+          'How many callories you want to eat during a day👇',
+          'Write alergic products👇',
+          'Write your diet👇',
+          'Write your gender👇',
+          'You are already registred👇']
 
 def pdf(call):
     print(call.message.chat.id)
     if call.data == 'PDFyes':
-        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text="y")
+        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text="http://www.sovel.org/images/upload/ru/1565/ProgramSIP_28032019.pdf")
     else:
-        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text="n")
+        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text="Good")
 
 def mentors(call):
     print(call.message.chat.id)
@@ -109,24 +107,28 @@ def send_welcome(message):
 def strategy(message):
     print(message.chat.id)
     keyboard = types.InlineKeyboardMarkup()
-    keyboard.add(types.InlineKeyboardButton(text='Male', callback_data='PDFyes'))
-    keyboard.add(types.InlineKeyboardButton(text='Female', callback_data='PDFno'))
+   # keyboard.add(types.InlineKeyboardButton(text='Male', callback_data='PDFyes'))
+   # keyboard.add(types.InlineKeyboardButton(text='Female', callback_data='PDFno'))
+    bot.send_message(message.chat.id, "Take a photo of your meal and I will calculate how many calories in it and is it appropriate with your diet and prefereces", reply_markup=keyboard)
 
-    bot.send_message(message.chat.id, "Send me a photo of what you are eating and I will calculate how many its calories", reply_markup=keyboard)
+    #if not message.chat.id in data:
+      #  data[message.chat.id] = {'one': 0, 'calories': None}
+
+  #  bot.send_message(message.chat.id, states[data[message.chat.id]['one']])
 
 @bot.message_handler(func=lambda msg: msg.text == 'Calculate calories')
 def place(message):
     print(message.chat.id)
-    bot.send_message(message.chat.id, "Место проведения: г. Москва, бизнес-отель «Бородино», ул. Русаковская, дом 13, строение 5, 3 этаж, зал \"Ермолов-Тучков\". ")
-    bot.send_location(message.chat.id, '55.784587', '37.672109')
+    bot.send_message(message.chat.id, "Write your meal and how many grams of it you will have - I will automaticly calculate you all calories")
+    #bot.send_location(message.chat.id, '55.784587', '37.672109')
 
 @bot.message_handler(func=lambda msg: msg.text == 'Write what you are eating')
 def rules(message):
     print(message.chat.id)
     keyboard = types.InlineKeyboardMarkup()
-    keyboard.add(types.InlineKeyboardButton(text='Карточка организатора', callback_data='card'))
-    keyboard.add(types.InlineKeyboardButton(text='Оплатить сейчас', callback_data='pay'))
-    keyboard.add(types.InlineKeyboardButton(text='Телефон для справок', callback_data='phone'))
+    keyboard.add(types.InlineKeyboardButton(text='Vegetarian', callback_data='card'))
+    keyboard.add(types.InlineKeyboardButton(text='Kosher', callback_data='card'))
+    keyboard.add(types.InlineKeyboardButton(text='Halal', callback_data='card'))
 
     bot.send_message(message.chat.id, lstr, reply_markup=keyboard)
 
@@ -162,7 +164,7 @@ def callback_inline(call):
         print(call.data)
         mentors(call)
     if call.data == 'card':
-        bot.send_message(call.message.chat.id, 'https://vk.com/doc226618405_496269466?hash=86ead02baa7dda57a1&dl=42c2c96915501ec7ab')
+        bot.send_message(call.message.chat.id, 'Now we will suggest you products and notice if the products that you are eating are not in your diet')
     if call.data == 'pay':
         bot.send_message(call.message.chat.id, 'Пожалуйста, произведите оплату через Яндекс кассу в размере 12 500 рублей')
         bot.send_invoice(call.message.chat.id, title='Оплата',
@@ -188,7 +190,7 @@ def callback_inline(call):
             if call.data == 'cardYes':
                 bot.send_message(call.message.chat.id, 'Загрузите карточку предприятия ')
             elif call.data == 'cardNo':
-                bot.send_message(call.message.chat.id, 'Your are successfully registred! ')
+                bot.send_message(call.message.chat.id, 'Your are successfully registered! ')
                 for a in admin:
                     bot.send_message(a, str(data[call.message.chat.id]))
 
@@ -242,7 +244,7 @@ def card(message):
                 with open(src, 'wb') as new_file:
                    new_file.write(downloaded_file)
 
-                bot.send_message(message.chat.id, 'Photo was successfully uploaded.\n You will have got your report shortly.')
+                bot.send_message(message.chat.id, 'Photo was successfully uploaded.\n You will have your report shortly.')
                 for a in admin:
                     bot.send_message(a, str(data[call.message.chat.id]))
             except Exception as e:
