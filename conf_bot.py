@@ -5,10 +5,10 @@ Good'''
 hello = '''
 Hello!
 
-I am a NutritionBot®️.
+I am NutritionBot®️.
 
-You can easily calcilate nutrition via, just send me a photo of your meal or write it to me. 
-Also I recognizing voice massages, so just say me what you are eating!☑️
+You can easily calculate nutrition by sending me a photo of your meal or texting me.
+I also recognize voice messages, so just say what you are eating!☑️
 
 Let's start👇
 '''
@@ -24,44 +24,36 @@ users = []
 
 print('starting...')
 photos = [
-          ['name\ncharacteristics', 'http://www.sovel.org/images/upload/ru/71/Nikeev_300400.jpg'],
-          ['Игорь Смирнов\nКоммерческий директор, ООО "Остек-Электро"', 'http://www.sovel.org/images/upload/ru/71/Smirnov_300h400.jpg'],
-          ['Виктор Ваньков\nНачальник отдела разработки систем в корпусе, АО "ПКК Миландр"', 'http://www.sovel.org/images/upload/ru/71/Vankov_300h400.jpg'],
-          ['Сергей Тимошенков\nДоктор технических наук, профессор, директор Института нано- и микросистемной техники, МИЭТ', 'http://www.sovel.org/images/upload/ru/71/Timoshenkov300H4001.jpg'],
-          ['Денис Вертянов\nРуководитель Учебно-научного центра проектирования Mentor Graphics, Институт нано- и микросистемной техники, МИЭТ', 'http://www.sovel.org/images/upload/ru/71/Vertyanov300H400.jpg'],
-          ['Алексей Решетников\nГенеральный директор, Engineering Solutions,Ltd', 'http://www.sovel.org/images/upload/ru/71/Reshetnikov_300h400.jpg'],
-          ['Сергей Доровских\nГлавный технолог, АО "Микроволновые системы"', 'http://www.sovel.org/images/upload/ru/71/Dorovskih_300400.jpg'],
-          ['Сергей Чигиринский\nТехнический директор, к.ф.-м.н., ООО "АК Микротех"', 'http://www.sovel.org/images/upload/ru/71/Chigirinsky_300h400.jpg'],
-          ['Михаил Чувствин\nНачальник опытно-конструкторского отдела, GS Nanotech"', 'http://www.sovel.org/images/upload/ru/71/Chuvstvin_300H400.jpg'],
-          ['Иван Селиванов\nВедущий специалист, АО МЕГРАТЕК', 'http://www.sovel.org/images/upload/ru/71/Selivanov_300h400.jpg'],
-          ['Сергей Беляков\nРуководитель отдела маркетинга и продвижения, GS Nanotech', 'http://www.sovel.org/images/upload/ru/71/Belyakov_300400.png'],
-          ['Владимир Бутузов\nВедущий разработчик ИС и СнК,к.т.н., ООО "ОКБ Пятое Поколение', 'http://www.sovel.org/images/upload/ru/71/Butuzov300h400.jpg'],
-          ['Владимир Косевской\nДиректор по производству, АО "НПЦ СпецЭлектронСистемы"', 'http://www.sovel.org/images/upload/ru/71/Kosevskoy300h4001.jpg'],
-          ['Максим Савицкий\nВедущий инженер-конструктор многокристальных модулей, GS Nanotech', 'http://www.sovel.org/images/upload/ru/71/Savickiy300h400.jpg'],
-          ['Алексей Болебрух\nВедущий инженер-тестировщик, GS Nanotech', 'http://www.sovel.org/images/upload/ru/71/Bolebruh300h400.jpg'],
-          ['Константин Белов\nГлавный технолог, GS Nanotech', 'http://www.sovel.org/images/upload/ru/71/Belov_300h400..jpg'],
-          ['Игорь Беляков\nАспирант, Институт нано- и микросистемной техники, МИЭТ', 'http://www.sovel.org/images/upload/ru/71/300H400_d.jpg'],
-          ['Андрей Скворцов\nИнженер, Keysight Technologies', 'http://www.sovel.org/images/upload/ru/71/300H400_d.jpg']
-         ]
 
-states = ['Write your full name👇',
-          'Write you age👇',
-          'How many callories you want to eat during a day👇',
-          'Write alergic products👇',
-          'Write your diet👇',
-          'Write your gender👇',
-          'You are already registred👇']
+["Rice\n","Amount: 100 grams","Calories: 130","Total fat (g): 0.9","Cholesterol (mg): 0","Protein (g): 2.6","Sodium (mg): 5", "Iron (%): 2","https://hips.hearstapps.com/vidthumb/images/delish-u-rice-2-1529079587.jpg"],
+["Chicken\n","Amount: 100 grams","Calories: 239","Total fat (g): 14","Cholesterol (mg): 88","Protein (g): 27","Sodium (mg): 82", "Iron (%): 7","https://www.maangchi.com/wp-content/uploads/2018/02/roasted-chicken-1.jpg"],
+["Beef\n","Amount: 100 grams","Calories: 250","Total fat (g): 15","Cholesterol (mg): 90","Protein (g): 26","Sodium (mg): 72", "Iron (%): 14","https://www.pressurecookrecipes.com/wp-content/uploads/2019/11/instant-pot-roast-beef.jpg"],
+["Pork\n","Amount: 100 grams","Calories: 145","Total fat (g): 14","Cholesterol (mg): 80","Protein (g): 27","Sodium (mg): 62", "Iron (%): 4","https://www.thespruceeats.com/thmb/csX1Y5mVIaiMXV4-uFN976C9Eds=/2048x1152/smart/filters:no_upscale()/garlic-and-herb-crusted-pork-loin-roast-3059504-7_preview-5b2bc4f88023b90037a968fa.jpg"],
+["Apple\n","Amount: 100 grams","Calories: 52","Total fat (g): 0.2","Cholesterol (mg): 0","Protein (g): 0.3","Sodium (mg): 1", "Iron (%): 0","https://www.allfoodsinfo.com/wp-content/uploads/2019/08/apple-benefits-vegetable-1080x540.jpg"],
+["Banana\n","Amount: 100 grams","Calories: 89","Total fat (g): 0.3","Cholesterol (mg): 0","Protein (g): 1.1","Sodium (mg): 1", "Iron (%): 1","https://api.time.com/wp-content/uploads/2019/11/gettyimages-459761948.jpg?w=600&quality=85"],
+["Orange\n","Amount: 100 grams","Calories: 47","Total fat (g): 0.1","Cholesterol (mg): 0","Protein (g): 0.9","Sodium (mg): 0", "Iron (%): 0","https://i5.walmartimages.ca/images/Enlarge/110/004/999999-33383110004.jpg"],
+["Broccoli\n","Amount: 100 grams","Calories: 31","Total fat (g): 0.4","Cholesterol (mg): 0","Protein (g): 2.5","Sodium (mg): 33", "Iron (%): 3","https://az836796.vo.msecnd.net/media/image/product/fr/medium/0000000094060.jpg"],
+["Carrot\n","Amount: 100 grams","Calories: 41","Total fat (g): 0.2","Cholesterol (mg): 0","Protein (g): 0.9","Sodium (mg): 69", "Iron (%): 4","https://www.almanac.com/sites/default/files/image_nodes/carrots-table_popidar-ss.jpg"],
+["White Bread\n","Amount: 100 grams","Calories: 265","Total fat (g): 3.2","Cholesterol (mg): 0","Protein (g): 9","Sodium (mg): 491", "Iron (%): 19","https://images.smuckers.ca/images/recipes/29/Basic-White-Bread_desktop.jpg"],
+
+]
+states = ['Enter your full name👇',
+          'Enter your age👇',
+          'How many calories are you planning on consuming today?👇',
+          'Enter your allergies👇',
+          'Enter your gender👇',
+          'You are already registered👇']
 
 def pdf(call):
     print(call.message.chat.id)
     if call.data == 'PDFyes':
-        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text="http://www.sovel.org/images/upload/ru/1565/ProgramSIP_28032019.pdf")
+        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text="y")
     else:
-        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text="хорошо")    
+        bot.edit_message_text(chat_id=call.message.chat.id, message_id=call.message.message_id, text="n")
 
 def mentors(call):
     print(call.message.chat.id)
-    
+
 
     if len(call.data) == 5:
         index = int(call.data[-1])
@@ -100,13 +92,13 @@ def send_welcome(message):
     users.append(message.chat.id)
 
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
-    
+
     strategy = types.KeyboardButton('Send a meal')
     speakers = types.KeyboardButton('Calories in products')
     place = types.KeyboardButton('Calculate calories')
     rules = types.KeyboardButton('Write what you are eating')
     registration = types.KeyboardButton('Registration')
-    
+
     markup.row(strategy, speakers)
     markup.row(place, rules)
     markup.row(registration)
@@ -120,11 +112,11 @@ def strategy(message):
     keyboard.add(types.InlineKeyboardButton(text='Male', callback_data='PDFyes'))
     keyboard.add(types.InlineKeyboardButton(text='Female', callback_data='PDFno'))
 
-    bot.send_message(message.chat.id, "Send me a photo of what you are eating and I will calculate how many calories in it", reply_markup=keyboard)
+    bot.send_message(message.chat.id, "Send me a photo of what you are eating and I will calculate how many its calories", reply_markup=keyboard)
 
 @bot.message_handler(func=lambda msg: msg.text == 'Calculate calories')
 def place(message):
-    print(message.chat.id) 
+    print(message.chat.id)
     bot.send_message(message.chat.id, "Место проведения: г. Москва, бизнес-отель «Бородино», ул. Русаковская, дом 13, строение 5, 3 этаж, зал \"Ермолов-Тучков\". ")
     bot.send_location(message.chat.id, '55.784587', '37.672109')
 
@@ -155,9 +147,9 @@ def registration(message):
 
     if not message.chat.id in data:
         data[message.chat.id] = {'state': 0, 'name': None, 'fio': None, 'dolg': None, 'email': None, 'phone': None, 'money': None, 'payd': None}
-    
+
     bot.send_message(message.chat.id, states[data[message.chat.id]['state']])
-    
+
     file = open('data.txt', 'w')
     file.write(str(data))
     file.close()
@@ -242,10 +234,10 @@ def card(message):
         if data[message.chat.id]['state'] == 6:
             try:
                 chat_id = message.chat.id
-           
+
                 file_info = bot.get_file(message.document.file_id)
                 downloaded_file = bot.download_file(file_info.file_path)
-              
+
                 src = str(chat_id) + message.document.file_name
                 with open(src, 'wb') as new_file:
                    new_file.write(downloaded_file)
@@ -281,7 +273,7 @@ def all(message):
         elif data[message.chat.id]['state'] == 2:
             data[message.chat.id]['dolg'] = message.text
             data[message.chat.id]['state'] += 1
-            bot.send_message(message.chat.id, states[data[message.chat.id]['state']])    
+            bot.send_message(message.chat.id, states[data[message.chat.id]['state']])
         elif data[message.chat.id]['state'] == 3:
             data[message.chat.id]['email'] = message.text
             data[message.chat.id]['state'] += 1
@@ -296,7 +288,7 @@ def all(message):
         elif message.chat.id in admin:
             for u in users:
                 bot.send_message(u, message.text)
-        
+
         file = open('data.txt', 'w')
         file.write(str(data))
         file.close()
@@ -310,10 +302,8 @@ def all(message):
 
 while True:
     try:
-        bot.polling()    
+        bot.polling()
     except:
         time.sleep(2)
     print('lol')
     time.sleep(2)
-    
-        
