@@ -7,7 +7,7 @@ Hello!
 
 I am a NutritionBot®️.
 
-You can easily calcilate nutrition with me, just send me a photo of your meal or text it to me.
+You can easily calculate nutrition with me, just send me a photo of your meal or text it to me.
 Also I recognize voice messages, so just tell me what you are eating!☑️
 
 Let's start👇
