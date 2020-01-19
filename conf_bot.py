@@ -35,12 +35,12 @@ photos = [
          ]
 
 states = ['Write your full name👇',
-          'Write you age👇',
-          'How many callories you want to eat during a day👇',
-          'Write alergic products👇',
+          'Write your age👇',
+          'How many calories do you want to intake during a day?👇',
+          'Write your allergies',
           'Write your diet👇',
           'Write your gender👇',
-          'You are already registred👇']
+          'You are already registered👇']
 
 def pdf(call):
     print(call.message.chat.id)
@@ -109,7 +109,7 @@ def strategy(message):
     keyboard = types.InlineKeyboardMarkup()
    # keyboard.add(types.InlineKeyboardButton(text='Male', callback_data='PDFyes'))
    # keyboard.add(types.InlineKeyboardButton(text='Female', callback_data='PDFno'))
-    bot.send_message(message.chat.id, "Take a photo of your meal and I will calculate how many calories in it and is it appropriate with your diet and prefereces", reply_markup=keyboard)
+    bot.send_message(message.chat.id, "Take a photo of your meal and I will calculate how many calories in it and is it appropriate with your diet and preferences", reply_markup=keyboard)
 
     #if not message.chat.id in data:
       #  data[message.chat.id] = {'one': 0, 'calories': None}
@@ -119,7 +119,7 @@ def strategy(message):
 @bot.message_handler(func=lambda msg: msg.text == 'Calculate calories')
 def place(message):
     print(message.chat.id)
-    bot.send_message(message.chat.id, "Write your meal and how many grams of it you will have - I will automaticly calculate you all calories")
+    bot.send_message(message.chat.id, "Write your meal and how many grams of it you will have - I will automatically calculate all your calories")
     #bot.send_location(message.chat.id, '55.784587', '37.672109')
 
 @bot.message_handler(func=lambda msg: msg.text == 'Write what you are eating')
